@@ -18,17 +18,17 @@ These instructions will get you a copy of the project up and running on your loc
 This project implements the simple HTTP functions:
 
 * GET - the get method gives "something" to us. Here we have to methods based on GET:
-** getAccounts() - return a list of accounts
-** getSelectedAccounts() - gave a "id" return the account in the list of accounts that have the same id
+**getAccounts() - return a list of accounts
+**getSelectedAccounts() - gave a "id" return the account in the list of accounts that have the same id
 
 * POST - send "something" to "someplace" or "someone":
-** addAccount(Account account) - add one account in the accounts' list
+**addAccount(Account account) - add one account in the accounts' list
 
 * DELETE - delete something in the "some place":
-** deleteAccount(int id) - recives an id and delete the account that it behind
+**deleteAccount(int id) - recives an id and delete the account that it behind
 
 * PUT- update "someone" in "someplace" based on id:
-** updateAccount(Account account,int id) - recives the changed object and the id
+**updateAccount(Account account,int id) - recives the changed object and the id
 
 
 ## Examples
@@ -89,7 +89,7 @@ Return:
  "The account number: 2 with user's name:teste was changed.";
 
 
-##Java Notations
+### Java Notations
 
 @RequestMapping(value = "/addres", method = GET) - map method to /addres and specifies the method's type, "method = GET"(GET in this case) 
 @PathVariable("variable") = specifie the variable that will be recived by the method
