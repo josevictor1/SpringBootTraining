@@ -6,82 +6,102 @@ The onjective of this project is construct a simple restful service to improve t
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Prerequisites
 
-What things you need to install the software and how to install them
+*[JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+*[Intellij](https://www.jetbrains.com/idea/) or [Eclipse](http://www.eclipse.org)
+*[Maven](https://maven.apache.org)
+*[Postman](https://www.getpostman.com)
 
-```
-Give examples
-```
+## Description
 
-### Installing
+This project implements the simple HTTP functions:
 
-A step by step series of examples that tell you have to get a development env running
+* GET - the get method gives "something" to us. Here we have to methods based on GET:
+** getAccounts() - return a list of accounts
+** getSelectedAccounts() - gave a "id" return the account in the list of accounts that have the same id
 
-Say what the step will be
+* POST - send "something" to "someplace" or "someone":
+** addAccount(Account account) - add one account in the accounts' list
 
-```
-Give the example
-```
+* DELETE - delete something in the "some place":
+** deleteAccount(int id) - recives an id and delete the account that it behind
 
-And repeat
+* PUT- update "someone" in "someplace" based on id:
+** updateAccount(Account account,int id) - recives the changed object and the id
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Examples
+To run the examples use postman. Local path: http://localhost:8080/
 
-## Running the tests
+### LIST
 
-Explain how to run the automated tests for this system
+command:"http://localhost:8080/listAccounts" or "http://localhost:8080/listAccounts/2"(i.e to get the account with id 2)
 
-### Break down into end to end tests
+Rerturn:
+{
+	"id": 1,
+	"name": "teste",
+	"description": "teste"
+}
 
-Explain what these tests test and why
 
-```
-Give an example
-```
+### ADD
 
-### And coding style tests
+command:"http://localhost:8080/addAccount"
 
-Explain what these tests test and why
+Body:
 
-```
-Give an example
-```
+{
+	"id": 3,
+	"name": "teste",
+	"description": "teste"
+}
 
-## Deployment
+Return: 
+"Account added"
 
-Add additional notes about how to deploy this on a live system
+### DELETE
 
-## Built With
+command:"http://localhost:8080/deleteAccount/2" (i.e to change the account with id 2)
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Return:
+ "The account number: 2 not founded"(if account doens't exist)
+        
+ "The account number:2 with user's name:teste was delete "
 
-## Contributing
+### UPDATE
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+command:"http://localhost:8080/updateAccount/2"(i.e to change the account with id 2)
 
-## Versioning
+Body:
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+{
+	"id": 2,
+	"name": "teste",
+	"description": "teste changed"
+}
+
+
+Return:
+ "The account number: 2 not founded";(if account doens't exist)
+       
+ "The account number: 2 with user's name:teste was changed.";
+
+
+##Java Notations
+
+@RequestMapping(value = "/addres", method = GET) - map method to /addres and specifies the method's type, "method = GET"(GET in this case) 
+@PathVariable("variable") = specifie the variable that will be recived by the method
+@RequestBody Type object - specifie that some object of some type will be recived by the method 
+@RestController - identifie the class as a Controller configured by the class
+@SpringBootApplication - identifie the class as a starter of the spring boot application
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **José Victor Pereira Costa**  
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
