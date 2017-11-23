@@ -1,6 +1,6 @@
 # Spring Boot Training - A Simple Restful Service Example
 
-The onjective of this project is construct a simple restful service to improve the knowledge in the Spring framework.
+The objective of this project is construct a simple restful service to improve the knowledge in the Spring framework.
 
 ## Getting Started
 
