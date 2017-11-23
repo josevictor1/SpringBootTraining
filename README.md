@@ -18,16 +18,20 @@ These instructions will get you a copy of the project up and running on your loc
 This project implements the simple HTTP functions:
 
 * GET - the get method gives "something" to us. Here we have to methods based on GET:
+
 **getAccounts() - return a list of accounts
 **getSelectedAccounts() - gave a "id" return the account in the list of accounts that have the same id
 
 * POST - send "something" to "someplace" or "someone":
+
 **addAccount(Account account) - add one account in the accounts' list
 
 * DELETE - delete something in the "some place":
+
 **deleteAccount(int id) - recives an id and delete the account that it behind
 
 * PUT- update "someone" in "someplace" based on id:
+
 **updateAccount(Account account,int id) - recives the changed object and the id
 
 
@@ -36,7 +40,7 @@ To run the examples use postman. Local path: http://localhost:8080/
 
 ### LIST
 
-command:"http://localhost:8080/listAccounts" or "http://localhost:8080/listAccounts/2"(i.e to get the account with id 2)
+command:"http://localhost:8080/listAccounts" or "http://localhost:8080/listAccounts/2" (i.e to get the account with id 2)
 
 Rerturn:
 {
