@@ -8,10 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-*[JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
-*[Intellij](https://www.jetbrains.com/idea/) or [Eclipse](http://www.eclipse.org)
-*[Maven](https://maven.apache.org)
-*[Postman](https://www.getpostman.com)
+* [JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Intellij](https://www.jetbrains.com/idea/) or [Eclipse](http://www.eclipse.org)
+* [Maven](https://maven.apache.org)
+* [Postman](https://www.getpostman.com)
 
 ## Description
 
