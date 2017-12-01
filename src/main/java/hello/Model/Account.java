@@ -1,11 +1,20 @@
 package hello.Model;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Account {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     public int id;
+
     public String name;
+
     public String description;
 
     public Account(){
